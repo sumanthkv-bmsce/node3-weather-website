@@ -13,10 +13,11 @@ document.getElementById('submit').addEventListener('click',(e)=> {
 
         e.preventDefault()
 
-       
         const address = document.querySelector('input').value;
-        const url = 'http://localhost:3000/weather?address='+address;
+        const url = '/weather?address='+address;
+        
         document.querySelector('#p1').innerHTML = "Loading...."
+
         fetch(url).then((response)=> {
         response.json().then((data)=> {
         if(data.error) {
