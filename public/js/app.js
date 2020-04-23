@@ -15,7 +15,7 @@ document.getElementById('submit').addEventListener('click',(e)=> {
 
         const address = document.querySelector('input').value;
         const url = '/weather?address='+address;
-        
+
         document.querySelector('#p1').innerHTML = "Loading...."
 
         fetch(url).then((response)=> {
@@ -23,6 +23,7 @@ document.getElementById('submit').addEventListener('click',(e)=> {
         if(data.error) {
             console.log(data.error);
             document.querySelector('#p1').innerHTML = data.error;
+            document.querySelector('#p2').innerHTML = "";
         }
         else {
             document.querySelector('#p1').innerHTML = data.location;
