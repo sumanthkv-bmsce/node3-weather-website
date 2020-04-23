@@ -17,6 +17,7 @@ document.getElementById('submit').addEventListener('click',(e)=> {
         const url = '/weather?address='+address;
 
         document.querySelector('#p1').innerHTML = "Loading...."
+        document.querySelector('#p2').innerHTML = "";
 
         fetch(url).then((response)=> {
         response.json().then((data)=> {
