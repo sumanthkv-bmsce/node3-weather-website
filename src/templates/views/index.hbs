@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- <script>
+            change = ()=> {
+                alert("yeah")
+            }
+            </script> -->
+            <title>Weather</title>
+            <link rel="stylesheet" href="/css/styles.css">
+            
+    </head>
+    <body>
+
+        <div class="main-content">
+        {{>header}}
+        
+         <!-- <button onclick={change()} id = "press">SUbmit</button> -->
+        <form>
+            <input placeholder="Location">
+            <button id="submit">Search</button>
+        </form>
+        <p id = "p1"></p>
+        <p id = "p2"></p>
+         </div>
+         {{>footer}}
+
+    <script src="js/app.js"></script>
+    </body>
+    
+</html>
